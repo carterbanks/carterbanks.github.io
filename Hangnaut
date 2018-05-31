@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Hangman Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
+    <link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+</head>
+
+<body>
+    
+
+    <!--div class="container"-->
+    <div class="container">    
+        <div class= "col-md-3"></div>
+        <div class="col-md-6 panel panel-default site-content">
+
+            <div class="page-header">
+                <h1>'Hangnaut' - Hangman for the Ancient Astronaut Theorist</h1>
+                <p>What would Giorgio Tsoukalos say? Guess a letter to reveal an Ancient Alien hotspot or a keyword!</p>
+                </p>
+                <audio id="play" autoplay loop controls>
+                    <source src="assets/audio/ancient-alien-theme-song.mp3" type="audio/mpeg" />
+                </audio>
+            </div>
+
+            <div class="row">
+                <div= class "col-md-6">
+                    <div class="col-md-12">
+                        <div id="word" class="col-md-12 panel panel-default">
+                            <h4>Ancient Alien Term to Guess</h4>
+                            <div class="panel-body">
+                                <h2 id="wordToGuess">_ _ _ _ _ _ _</h2>
+                            </div>
+                            <div class="col-md-12">
+                                <div id="guesses" class="panel col-md-12 panel-default">
+                                    <div class="panel-body">
+                                        incorrect:
+                                        <span id="wrongGuesses"></span>
+                                    </div>
+                                </div>
+                                <div class="panel col-md-12 panel-default">
+                                    <div class="panel-body">
+                                        Remaining:
+                                        <span id="numGuesses" class="badge badge-primary badge-pill"></span>
+                                    </div>
+                                </div>
+                                <div class="panel col-md-12 panel-default">
+                                    <div class="panel-body">
+                                        Victories:
+                                        <span id="winCounter" class="badge badge-primary badge-pill">0</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="panel col-md-12 panel-default">
+                                    <div class="panel-body">
+                                        Defeats:
+                                        <span id="lossCounter" class="badge badge-primary badge-pill">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.col-md-12 -->
+                            
+                        </div>
+                        <!-- /.col-md-12 -->
+
+                    
+                        <div class="panel panel-default col-md-12 site-content guess-content">
+                            <img class="img-responsive container-fluid no-padding" src="assets/images/ancient-aliens-meme-14.jpg" alt="underworld">
+                        </div>
+                        <!-- /.col-md-12 -->
+                    </div>
+                    <!-- /.col-md-12 -->
+                </div>
+                <!--/.col-md-6-->
+            </div>
+            <!-- /.row-->
+        </div>
+        <!-- /.col-md-12 -->
+        <div class="col-md-3"></div>
+    </div>
+    <!-- /.container-->
+        
+        <script src="assets/javascript/game.js"></script>
+        <div class="modal fade" id="endGameDialog" tabindex="-1" role="dialog" aria-labelledby="endGameDialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4>
+                            <a onclick="resetGame();" class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
+                        </h4>
+                        <h4 id="endGameDialogTitle"></h4>
+                    </div>
+                    <div class="modal-body" id="endGameDialogContent"></div>
+                    <div class="modal-footer">
+                        <h4>
+                            <a onclick="resetGame();" class="btn btn-primary" data-dismiss="modal">Reset</a>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+    
+
+    <!-- Footer -->
+    <footer class="footer navbar-sticky-bottom text-center bg-3">
+        <p>Copyright © 2018 Carter Banks </p>
+    </footer>
+
+</body>
+
+</html>
